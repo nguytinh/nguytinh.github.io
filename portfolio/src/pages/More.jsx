@@ -1,8 +1,7 @@
 import React from 'react';
-import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import { motion } from 'framer-motion';
+import { ParallaxSection, StaggerContainer, StaggerItem } from '../components/Layout/Animations';
+import PageWrapper from '../components/Layout/PageWrapper';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-import "../styles/More.css";
 
 import img1 from '../assets/More/img1.JPG';
 import img2 from '../assets/More/img2.JPEG';
@@ -18,78 +17,54 @@ import img11 from '../assets/More/img11.JPG';
 import img12 from '../assets/More/img12.JPG';
 import img13 from '../assets/More/img13.JPG';
 
-
 function More() {
   const images = [
-    { src: img7, alt: "Description of image 7", orientation: "horizontal" },
-    { src: img8, alt: "Description of image 8", orientation: "vertical" },  // Vertical image
-    { src: img1, alt: "Description of image 1", orientation: "horizontal" },
-    { src: img2, alt: "Description of image 2", orientation: "horizontal" },
-    { src: img3, alt: "Description of image 3", orientation: "horizontal" },
-    { src: img4, alt: "Description of image 4", orientation: "horizontal" },
-    { src: img5, alt: "Description of image 5", orientation: "horizontal" },
-    { src: img6, alt: "Description of image 6", orientation: "vertical" },  // Vertical image
-    { src: img11, alt: "Description of image 11", orientation: "horizontal" },
-    { src: img12, alt: "Description of image 12", orientation: "horizontal" },
-    { src: img9, alt: "Description of image 9", orientation: "horizontal" },
-    { src: img10, alt: "Description of image 10", orientation: "vertical" }, // Vertical image
-    { src: img13, alt: "Description of image 13", orientation: "horizontal" },
+    { src: img7, alt: "Photo 7" },
+    { src: img8, alt: "Photo 8" },
+    { src: img1, alt: "Photo 1" },
+    { src: img2, alt: "Photo 2" },
+    { src: img3, alt: "Photo 3" },
+    { src: img4, alt: "Photo 4" },
+    { src: img5, alt: "Photo 5" },
+    { src: img6, alt: "Photo 6" },
+    { src: img11, alt: "Photo 11" },
+    { src: img12, alt: "Photo 12" },
+    { src: img9, alt: "Photo 9" },
+    { src: img10, alt: "Photo 10" },
+    { src: img13, alt: "Photo 13" },
   ];
 
-  const fixedHeight = 400; 
-
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{
-        duration: 0.3,
-        ease: "easeInOut"
-      }}
-    >
-      <MDBContainer className="my-5">
-        <MDBRow className="text-center mb-4">
-          <MDBCol>
-          <h1
-            style={{
-              fontSize: '3rem',
-              color: 'black', 
-            }}
-          >
-            My Photos
-          </h1>
-          </MDBCol>
-        </MDBRow>
-
-        <MDBRow className="justify-content-center">
+    <PageWrapper className="bg-white text-black dark:bg-black dark:text-white min-h-screen transition-colors duration-300">
+      <ParallaxSection className="pt-20 pb-32">
+        <h1 className="text-5xl font-bold text-center text-black dark:text-white mb-20">My Photos</h1>
+        
+        <StaggerContainer className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mx-auto max-w-7xl px-4">
           {images.map((image, index) => (
-            <MDBCol 
-              key={index} 
-              md={image.orientation === "vertical" ? "4" : "6"} 
-              sm="12" 
-              className="d-flex justify-content-center align-items-center mb-4"
-            >
-              <div style={{ height: fixedHeight }}> 
-                <img 
-                  src={image.src} 
-                  alt={image.alt} 
-                  className="img-fluid"
-                  style={{ 
-                    height: '100%',   
-                    width: 'auto',   
-                    objectFit: 'contain',  
-                    border: "none"
-                  }}
-                />
-              </div>
-            </MDBCol>
+            <StaggerItem key={index} className="break-inside-avoid">
+              <a 
+                href="https://www.instagram.com/tinhph0ng/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="relative group overflow-hidden bg-gray-100 dark:bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt} 
+                    className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                </div>
+              </a>
+            </StaggerItem>
           ))}
-        </MDBRow>
-      </MDBContainer>
-
+        </StaggerContainer>
+      </ParallaxSection>
+      
       <ScrollToTopButton /> 
-    </motion.div>
+    </PageWrapper>
   );
 }
 

@@ -19,8 +19,8 @@ function AboutMe() {
   };
 
   return (
-    <PageWrapper className="bg-slate-900 text-slate-50 min-h-screen">
-      {/* Background Effect - could be a separate component */}
+    <PageWrapper className="bg-white text-black dark:bg-black dark:text-white min-h-screen transition-colors duration-300">
+      {/* Background Effect */}
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
          <div className="absolute top-0 -left-4 w-72 h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
          <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
@@ -40,16 +40,16 @@ function AboutMe() {
             <img 
               src={profileImage} 
               alt="Profile" 
-              className="relative w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-slate-800 shadow-2xl"
+              className="relative w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white dark:border-gray-800 shadow-2xl"
             />
           </motion.div>
 
           <div className="space-y-4">
             <FadeIn delay={0.2}>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white">Tinh-Phong Nguyen</h1>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-black dark:text-white">Tinh-Phong Nguyen</h1>
             </FadeIn>
             <FadeIn delay={0.4}>
-              <p className="text-xl md:text-2xl text-sky-400 font-light">Computer Scientist</p>
+              <p className="text-xl md:text-2xl text-sky-500 font-light">Computer Scientist</p>
             </FadeIn>
           </div>
 
@@ -58,13 +58,13 @@ function AboutMe() {
               href={resume} 
               target="_blank" 
               rel="noreferrer"
-              className="inline-block px-8 py-3 bg-white text-slate-900 rounded-full font-semibold hover:bg-slate-200 transition-colors shadow-lg shadow-white/10"
+              className="inline-block px-8 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow-lg"
             >
               Resume
             </a>
           </FadeIn>
 
-          <FadeIn delay={0.8} className="space-y-6 max-w-2xl text-lg md:text-xl leading-relaxed text-gray-900 dark:text-gray-300">
+          <FadeIn delay={0.8} className="space-y-6 max-w-2xl text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300">
             <p>
               I’m a fourth-year computer science student at Cal Poly SLO and my focuses are on full-stack development, machine learning and software engineering. Being inspired by curiosity and innovation, I am interested in versatile SWE positions.
             </p>
@@ -76,7 +76,7 @@ function AboutMe() {
           <FadeIn delay={1.0} className="pt-10">
             <button 
               onClick={handleIconClick}
-              className="text-slate-400 hover:text-sky-400 transition-colors duration-300 group flex flex-col items-center gap-2"
+              className="text-gray-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors duration-300 group flex flex-col items-center gap-2"
             >
               <i className="fas fa-info-circle text-4xl group-hover:scale-110 transition-transform"></i>
               <span className="text-sm">More Info</span>
@@ -92,3 +92,4 @@ function AboutMe() {
 }
 
 export default AboutMe;
+

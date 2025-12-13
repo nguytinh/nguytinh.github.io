@@ -13,6 +13,7 @@ import Aim from '../pages/Aim';
 import NeuralNetwork from '../pages/Neuralnetwork';
 import Aery from '../pages/Aery';
 import HorseGPT from '../pages/Horse';
+import Tinvest from '../pages/Tinvest';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function AnimatedRoutes() {
         <Route path="/benchmark" element={<NeuralNetwork />} />
         <Route path="/aery" element={<Aery />} />
         <Route path="/horsegpt" element={<HorseGPT />} />
+        <Route path="/tinvest" element={<Tinvest />} />
       </Routes>
     </AnimatePresence>
   );
