@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.140f6443.css",
-    "main.js": "/static/js/main.9e4e3e52.js",
+    "main.js": "/static/js/main.9baa107a.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/img11.JPG": "/static/media/img11.a6bcb3f703957bc7859f.JPG",
     "static/media/img1.png": "/static/media/img1.a6b91e7acd4317db6ff8.png",
@@ -58,7 +58,7 @@
     "static/media/oop.jpg": "/static/media/oop.68d87ab182f8a29aa889.jpg",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
     "static/media/workbench.png": "/static/media/workbench.98ec8faa8413d5376de0.png",
-    "static/media/Tinh_s_Resume.pdf": "/static/media/Tinh_s_Resume.1f38dab15162d2719224.pdf",
+    "static/media/Tinh_s_Resume.pdf": "/static/media/Tinh_s_Resume.dc76d323008239f1d300.pdf",
     "static/media/inventory.jpg": "/static/media/inventory.5d08c0f61ab30ee995b6.jpg",
     "static/media/img12.png": "/static/media/img12.3eeeee7f483172b63428.png",
     "static/media/ebayapi.jpg": "/static/media/ebayapi.456fdbb6a23900f7643e.jpg",
@@ -77,11 +77,11 @@
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/index.html",
     "main.140f6443.css.map": "/static/css/main.140f6443.css.map",
-    "main.9e4e3e52.js.map": "/static/js/main.9e4e3e52.js.map",
+    "main.9baa107a.js.map": "/static/js/main.9baa107a.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.140f6443.css",
-    "static/js/main.9e4e3e52.js"
+    "static/js/main.9baa107a.js"
   ]
 }
