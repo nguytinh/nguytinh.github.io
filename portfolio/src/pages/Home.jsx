@@ -144,7 +144,7 @@ function Home() {
       </ParallaxSection>
 
       {/* Projects Section - Tetris/Masonry Grid */}
-      <section className="pb-32 px-4 md:px-8 max-w-[1800px] mx-auto mt-32">
+      <section className="pb-32 px-4 md:px-8 max-w-[1800px] mx-auto mt-32 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-4 auto-rows-dense">
           {projects.map((project, index) => {
             // Sizing Logic

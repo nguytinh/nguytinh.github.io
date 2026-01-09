@@ -64,7 +64,7 @@ const ModernNavbar = () => {
             aria-label="Toggle Theme"
           >
             {isDarkMode ? (
-              <i className="fas fa-sun text-yellow-400 text-xl"></i>
+              <i className="fas fa-sun text-white text-xl"></i>
             ) : (
               <i className="fas fa-moon text-gray-600 text-xl"></i>
             )}
@@ -78,7 +78,7 @@ const ModernNavbar = () => {
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
           >
             {isDarkMode ? (
-              <i className="fas fa-sun text-yellow-400"></i>
+              <i className="fas fa-sun text-white"></i>
             ) : (
               <i className="fas fa-moon text-gray-600"></i>
             )}
