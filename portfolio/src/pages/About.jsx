@@ -66,7 +66,7 @@ function AboutMe() {
 
           <FadeIn delay={0.8} className="space-y-6 max-w-2xl text-lg md:text-xl leading-relaxed text-gray-900 dark:text-gray-300">
             <p>
-              I’m a fourth-year computer science student at Cal Poly SLO and my focuses are on full-stack development, machine learning and software engineering. Being inspired by curiosity and innovation, I am interested in versatile SWE positions.
+              I’m a Cal Poly SLO Computer Science graduate and Software Engineer at USC-ISI, and my focuses are on full-stack development, machine learning and software development. Being inspired by curiosity and innovation, I am interested in versatile SWE positions.
             </p>
             <p>
               Hello guys. I like playing basketball, I love occassional gambling (investing in the stock market), and I like working out. Lets go warriors! Lets go Pat Spencer! Feel free to contact me to talk about both professional and unprofessional topics.

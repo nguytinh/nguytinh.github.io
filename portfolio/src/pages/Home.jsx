@@ -15,75 +15,97 @@ import aimImage from '../assets/aim.jpg';
 import aeryImage from '../assets/aery.jpg';
 import horseImage from '../assets/horsegpt.jpg';
 
-import tinvestImage from '../assets/tinvestbanner.jpg'; 
+import tinvestImage from '../assets/tinvestbanner.jpg';
+import dewImage from '../assets/dewbanner.jpg';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Home() {
   const projects = [
+    // Row 1-2: DEW (8 cols, 2 rows) + HorseGPT (4 cols, 2 rows) = 12
     {
-      title: "Tinvest",
-      description: "Real-Time Stock Portfolio Tracker",
-      image: tinvestImage, 
-      link: "/tinvest",
-      size: "large" // 8 cols, 2 rows
+      title: "DEW",
+      description: "Distributed Experiment Workflow",
+      year: "2026",
+      image: dewImage,
+      link: "/dew",
+      size: "large",
     },
     {
       title: "HorseGPT",
       description: "AI Horse Racing Predictor",
+      year: "2025",
       image: horseImage,
       link: "/horsegpt",
-      size: "tall" // 4 cols, 2 rows
+      size: "tall",
+    },
+    // Row 3: Tinvest (8 cols) + Aery (4 cols) = 12
+    {
+      title: "Tinvest",
+      description: "Real-Time Stock Portfolio Tracker",
+      year: "2025",
+      image: tinvestImage,
+      link: "/tinvest",
+      size: "wide",
     },
     {
       title: "Aery",
       description: "Social Habit Tracking App",
+      year: "2024",
       image: aeryImage,
       link: "/aery",
-      size: "normal" // 4 cols
+      size: "normal",
     },
+    // Row 4: Neural (4) + Inventory (4) + Chess (4) = 12
     {
       title: "Neural Network Benchmark",
       description: "AI Architecture Research",
+      year: "2024",
       image: neuralnetworkImage,
       link: "/benchmark",
-      size: "normal" // 4 cols
+      size: "normal",
     },
     {
       title: "4YourInventory",
       description: "Inventory Management System",
+      year: "2024",
       image: inventoryImage,
       link: "/4yourinventory",
-      size: "normal" // 4 cols (was tall, now normal to fit better)
+      size: "normal",
     },
     {
       title: "Chess AI",
       description: "Python Chess Engine",
+      year: "2023",
       image: chessImage,
       link: "/chess",
-      size: "wide" // 8 cols
+      size: "normal",
     },
+    // Row 5: Aim (4) + Restaurant (4) + Demon Slayer (4) = 12
     {
       title: "Aim Trainer",
       description: "Flask Web Game",
+      year: "2024",
       image: aimImage,
       link: "/aim",
-      size: "normal" // 4 cols
+      size: "normal",
     },
     {
       title: "Restaurant App",
       description: "Multi-Restaurant Web App",
+      year: "2024",
       image: restaurantImage,
       link: "/restaurant",
-      size: "normal" // 4 cols
+      size: "normal",
     },
     {
       title: "Demon Slayer Sim",
       description: "Java OOP Simulation",
+      year: "2023",
       image: oopImage,
       link: "/demonslayer",
-      size: "wide" // 8 cols
-    }
+      size: "normal",
+    },
   ];
 
   return (
@@ -194,6 +216,9 @@ function Home() {
                           whileHover={{ y: 0, opacity: 1 }}
                           transition={{ duration: 0.3 }}
                         >
+                          <p className="text-sky-400 text-xs font-semibold tracking-widest uppercase mb-1">
+                            {project.year}
+                          </p>
                           <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 tracking-tight shadow-black drop-shadow-md">
                             {project.title}
                           </h3>
@@ -203,13 +228,6 @@ function Home() {
                           </p>
                         </motion.div>
                       </div>
-                    </div>
-
-                    {/* Arrow Icon */}
-                    <div className="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
-                      <span className="flex items-center justify-center w-10 h-10 bg-white/20 backdrop-blur-md rounded-full text-white border border-white/30">
-                        <i className="fas fa-arrow-up-right text-sm" />
-                      </span>
                     </div>
                   </div>
                 </Link>

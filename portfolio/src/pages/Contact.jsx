@@ -80,7 +80,7 @@ function Contact() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="w-full py-4 bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-lg shadow-lg transition-colors flex justify-center items-center disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold rounded-lg shadow-lg transition-colors flex justify-center items-center disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={state.submitting}
             >
               {state.submitting ? (

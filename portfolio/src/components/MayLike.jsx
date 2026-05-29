@@ -10,10 +10,12 @@ import aimImage from '../assets/aim.jpg';
 import nnIMAGE from '../assets/nnbench.jpg';
 import aeryImage from '../assets/aery.jpg';
 import horseImage from '../assets/horsegpt.jpg';
-import tinvestImage from '../assets/tinvestbanner.jpg'; 
+import tinvestImage from '../assets/tinvestbanner.jpg';
+import dewImage from '../assets/dewbanner.jpg';
 
 function MayLike({ currentProject }) {
   const projects = [
+    { title: 'Distributed Experiment Workflow (DEW)', year: '2026', image: dewImage, link: '/dew' },
     { title: 'Tinvest', year: '2025', image: tinvestImage, link: '/tinvest' },
     { title: 'Adaptive Multi-Restaurant Web Application', year: '2024', image: restaurantImage, link: '/restaurant' },
     { title: 'Chess AI - Sigma Phi Delta', year: '2023', image: chessImage, link: '/chess' },

@@ -14,6 +14,7 @@ import NeuralNetwork from '../pages/Neuralnetwork';
 import Aery from '../pages/Aery';
 import HorseGPT from '../pages/Horse';
 import Tinvest from '../pages/Tinvest';
+import DEW from '../pages/DEW';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function AnimatedRoutes() {
         <Route path="/aery" element={<Aery />} />
         <Route path="/horsegpt" element={<HorseGPT />} />
         <Route path="/tinvest" element={<Tinvest />} />
+        <Route path="/dew" element={<DEW />} />
       </Routes>
     </AnimatePresence>
   );
