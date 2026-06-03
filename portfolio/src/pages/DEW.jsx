@@ -25,6 +25,14 @@ function DEW() {
         >
           GitLab
         </a>
+        <a
+          href="https://dew.sphere-testbed.net/"
+          target="_blank"
+          rel="noreferrer"
+          className="px-6 py-2 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-500 transition-colors shadow-lg"
+        >
+          Live Site
+        </a>
       </div>
 
       <SectionCard title="What is DEW?" images={[dewLogin]}>
