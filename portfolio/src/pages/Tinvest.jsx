@@ -62,23 +62,23 @@ function Tinvest() {
       <SectionCard title="Key Technical Achievements">
         <div className="space-y-6">
           <div>
-            <h4 className="font-bold text-sky-400">1. Physics-Based Data Visualization</h4>
+            <h4 className="font-bold text-purple-400">1. Physics-Based Data Visualization</h4>
             <p>Implemented a unique stock visualization system using Matter.js physics engine where each stock is represented as a 3D sphere. Ball size correlates with percentage change magnitude, featuring real-time physics simulation with gravity, friction, and collision detection.</p>
           </div>
           <div>
-            <h4 className="font-bold text-sky-400">2. Dual Authentication System</h4>
+            <h4 className="font-bold text-purple-400">2. Dual Authentication System</h4>
             <p>Built a flexible authentication system supporting traditional email/password with bcrypt hashing and Google OAuth 2.0 integration. Includes unified user model with nullable fields and account linking for existing users.</p>
           </div>
           <div>
-            <h4 className="font-bold text-sky-400">3. Real-Time Data Pipeline</h4>
+            <h4 className="font-bold text-purple-400">3. Real-Time Data Pipeline</h4>
             <p>Optimized data fetching with parallel API requests using Promise.all, client-side caching with user-specific keys, graceful error handling, and rate limit detection.</p>
           </div>
            <div>
-            <h4 className="font-bold text-sky-400">4. Database Architecture</h4>
+            <h4 className="font-bold text-purple-400">4. Database Architecture</h4>
             <p>Designed a scalable database schema with per-user watchlist isolation, favorite stocks functionality, efficient indexing strategy, and connection pooling for performance.</p>
           </div>
            <div>
-            <h4 className="font-bold text-sky-400">5. Type-Safe Full-Stack Development</h4>
+            <h4 className="font-bold text-purple-400">5. Type-Safe Full-Stack Development</h4>
             <p>Maintained type safety across the entire stack using shared TypeScript interfaces, strict mode enabled, type-safe database queries with generics, and proper error typing.</p>
           </div>
         </div>

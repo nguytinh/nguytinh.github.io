@@ -36,7 +36,7 @@ const ModernNavbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <NavLink to="/" className="text-2xl font-bold text-black dark:text-white tracking-tighter">
-          TN<span className="text-sky-500">.</span>
+          TN<span className="text-purple-500">.</span>
         </NavLink>
 
         {/* Desktop Menu */}
@@ -48,7 +48,7 @@ const ModernNavbar = () => {
               className={({ isActive }) =>
                 `text-sm font-medium tracking-wide transition-colors duration-300 ${
                   isActive 
-                    ? 'text-sky-500 font-bold' 
+                    ? 'text-purple-500 font-bold' 
                     : 'text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white'
                 }`
               }
@@ -115,7 +115,7 @@ const ModernNavbar = () => {
                   className={({ isActive }) =>
                     `text-lg font-medium transition-colors ${
                       isActive 
-                        ? 'text-sky-500 font-bold' 
+                        ? 'text-purple-500 font-bold' 
                         : 'text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white'
                     }`
                   }

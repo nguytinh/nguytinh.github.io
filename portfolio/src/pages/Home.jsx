@@ -162,6 +162,25 @@ function Home() {
               <i className="fas fa-envelope"></i>
             </a>
           </motion.div>
+
+          {/* Scroll Down Indicator */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.6 }}
+            className="flex flex-col items-center gap-2 pt-16 pb-4"
+          >
+            <span className="text-xs font-medium tracking-widest uppercase text-gray-400 dark:text-gray-500">
+              Scroll to explore
+            </span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
+              className="text-purple-500"
+            >
+              <i className="fas fa-chevron-down text-xl"></i>
+            </motion.div>
+          </motion.div>
         </div>
       </ParallaxSection>
 
@@ -194,7 +213,7 @@ function Home() {
                 className={`${colSpan} ${rowSpan} w-full h-full min-h-[300px] md:min-h-[auto]`}
               >
                 <Link to={project.link} className="block group relative w-full h-full">
-                  <div className="relative w-full h-full overflow-hidden bg-gray-100 dark:bg-neutral-900 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-sky-500/20">
+                  <div className="relative w-full h-full overflow-hidden bg-gray-100 dark:bg-neutral-900 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
                     
                     {/* Image Container - Fill the cell completely */}
                     <div className="w-full h-full">
@@ -216,13 +235,13 @@ function Home() {
                           whileHover={{ y: 0, opacity: 1 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <p className="text-sky-400 text-xs font-semibold tracking-widest uppercase mb-1">
+                          <p className="text-purple-400 text-xs font-semibold tracking-widest uppercase mb-1">
                             {project.year}
                           </p>
                           <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 tracking-tight shadow-black drop-shadow-md">
                             {project.title}
                           </h3>
-                          <div className="h-1 w-12 bg-sky-500 mb-2 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                          <div className="h-1 w-12 bg-purple-500 mb-2 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                           <p className="text-gray-200 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                             {project.description}
                           </p>

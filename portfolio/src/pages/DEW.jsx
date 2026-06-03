@@ -44,7 +44,7 @@ function DEW() {
 
       <SectionCard title="SPHERE Authentication" images={[sphereSignin]}>
         <p>
-          DEW is an extension of the SPHERE ecosystem, not a standalone product. Users sign in with their SPHERE credentials via @ory/client (SPHERE Kratos), with legacy Google OAuth support. The backend issues cookie tokens and assigns synthetic <code className="text-sky-400">sphere_*</code> UIDs for SPHERE users so experiments stay tied to the correct testbed identity.
+          DEW is an extension of the SPHERE ecosystem, not a standalone product. Users sign in with their SPHERE credentials via @ory/client (SPHERE Kratos), with legacy Google OAuth support. The backend issues cookie tokens and assigns synthetic <code className="text-purple-400">sphere_*</code> UIDs for SPHERE users so experiments stay tied to the correct testbed identity.
         </p>
         <p>
           After authentication, researchers land on the DEW workspace where experiments are versioned in SQLite (or MySQL in production) and stored as JSON blobs containing actors, behaviors, constraints, bindings, and node specifications.
@@ -56,7 +56,7 @@ function DEW() {
           The dashboard is the central hub for managing experiments. From here, users can open existing designs, start new ones, and track work in progress before pushing to the testbed.
         </p>
         <p>
-          A new experiment opens as a blank canvas ready for topology and configuration. The editor keeps actors, behaviors, constraints, and node specs in memory through an RxJS <code className="text-sky-400">StateService</code> (BehaviorSubjects) on the frontend, while the Flask API persists versioned experiment records via SQLAlchemy-Continuum.
+          A new experiment opens as a blank canvas ready for topology and configuration. The editor keeps actors, behaviors, constraints, and node specs in memory through an RxJS <code className="text-purple-400">StateService</code> (BehaviorSubjects) on the frontend, while the Flask API persists versioned experiment records via SQLAlchemy-Continuum.
         </p>
       </SectionCard>
 
@@ -77,15 +77,15 @@ function DEW() {
           After deploy, JupyterHub opens automatically for the experiment&apos;s XDC so researchers can work with notebooks immediately. The Merge Portal view confirms the experiment is live on the testbed with the expected topology and resources.
         </p>
         <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
-          <li>Generates and translates configs through <code className="text-sky-400">DewFunctions/</code> parsers and generators on the backend</li>
-          <li>Calls the external SPHERE Merge API via <code className="text-sky-400">@mergetb/api</code> testbed types</li>
+          <li>Generates and translates configs through <code className="text-purple-400">DewFunctions/</code> parsers and generators on the backend</li>
+          <li>Calls the external SPHERE Merge API via <code className="text-purple-400">@mergetb/api</code> testbed types</li>
           <li>Opens the Jupyter notebook URL for the materialized experiment without manual navigation</li>
         </ul>
       </SectionCard>
 
       <SectionCard title="Frontend — Angular 15">
         <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
-          <li><strong>Framework:</strong> Angular 15 — editor and API client; proxies <code className="text-sky-400">/api/*</code> to Flask</li>
+          <li><strong>Framework:</strong> Angular 15 — editor and API client; proxies <code className="text-purple-400">/api/*</code> to Flask</li>
           <li><strong>UI:</strong> Angular Material + Bootstrap</li>
           <li><strong>Graphs:</strong> vis-network, @swimlane/ngx-graph, d3</li>
           <li><strong>Auth:</strong> @ory/client (SPHERE Kratos), legacy Google OAuth</li>
@@ -97,7 +97,7 @@ function DEW() {
 
       <SectionCard title="Backend — Flask + REST">
         <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
-          <li><strong>Framework:</strong> Flask 1.1 + Flask-RESTX (Swagger), ~70+ routes in <code className="text-sky-400">privateapi.py</code></li>
+          <li><strong>Framework:</strong> Flask 1.1 + Flask-RESTX (Swagger), ~70+ routes in <code className="text-purple-400">privateapi.py</code></li>
           <li><strong>ORM:</strong> Flask-SQLAlchemy + SQLAlchemy-Continuum (versioned experiments)</li>
           <li><strong>Migrations:</strong> Alembic</li>
           <li><strong>Core logic:</strong> DewFunctions/ — parsers, generators, translators</li>
@@ -108,7 +108,7 @@ function DEW() {
 
       <SectionCard title="Infrastructure">
         <p>
-          In development, the Angular dev server proxies to Flask on port 5555 via <code className="text-sky-400">proxy.conf.json</code>. Production runs as a Docker image: nginx on port 80 serves Angular static assets and proxies <code className="text-sky-400">/api</code> to Flask on port 8800. Kubernetes deployment uses a Helm chart (<code className="text-sky-400">deploy/dew/</code>) with a single container, CephFS PVC for SQLite persistence, and ingress at <code className="text-sky-400">dew.sphere-testbed.net</code>.
+          In development, the Angular dev server proxies to Flask on port 5555 via <code className="text-purple-400">proxy.conf.json</code>. Production runs as a Docker image: nginx on port 80 serves Angular static assets and proxies <code className="text-purple-400">/api</code> to Flask on port 8800. Kubernetes deployment uses a Helm chart (<code className="text-purple-400">deploy/dew/</code>) with a single container, CephFS PVC for SQLite persistence, and ingress at <code className="text-purple-400">dew.sphere-testbed.net</code>.
         </p>
         <pre className="text-sm bg-gray-100 dark:bg-neutral-800 p-4 rounded overflow-x-auto text-gray-800 dark:text-gray-300">
 {`Browser

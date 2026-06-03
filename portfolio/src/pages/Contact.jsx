@@ -12,7 +12,7 @@ function Contact() {
       <PageWrapper className="bg-white text-black dark:bg-black dark:text-white min-h-screen">
         <ParallaxSection>
           <FadeIn className="w-full max-w-lg mx-auto bg-gray-50 dark:bg-neutral-900 p-8 shadow-2xl border border-gray-200 dark:border-neutral-800 text-center transition-colors duration-300">
-            <h2 className="text-3xl font-bold text-sky-500 mb-4">Message Sent!</h2>
+            <h2 className="text-3xl font-bold text-purple-500 mb-4">Message Sent!</h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg">
               Thanks for reaching out. I'll get back to you as soon as possible.
             </p>
@@ -44,7 +44,7 @@ function Contact() {
                 type="text"
                 name="name"
                 required
-                className="w-full px-4 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black dark:text-white placeholder-gray-400 transition-all outline-none"
+                className="w-full px-4 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black dark:text-white placeholder-gray-400 transition-all outline-none"
                 placeholder="Your Name"
               />
               <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 dark:text-red-400 text-sm mt-1" />
@@ -57,7 +57,7 @@ function Contact() {
                 type="email"
                 name="email"
                 required
-                className="w-full px-4 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black dark:text-white placeholder-gray-400 transition-all outline-none"
+                className="w-full px-4 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black dark:text-white placeholder-gray-400 transition-all outline-none"
                 placeholder="you@example.com"
               />
               <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 dark:text-red-400 text-sm mt-1" />
@@ -70,7 +70,7 @@ function Contact() {
                 name="message"
                 rows="5"
                 required
-                className="w-full px-4 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black dark:text-white placeholder-gray-400 transition-all outline-none resize-none"
+                className="w-full px-4 py-3 bg-white dark:bg-black border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black dark:text-white placeholder-gray-400 transition-all outline-none resize-none"
                 placeholder="How can I help you?"
               />
               <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 dark:text-red-400 text-sm mt-1" />

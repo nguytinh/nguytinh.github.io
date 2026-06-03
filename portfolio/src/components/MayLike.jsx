@@ -50,7 +50,7 @@ function MayLike({ currentProject }) {
           >
             <motion.div 
               whileHover={{ y: -5 }}
-              className="bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-neutral-800 transition-colors group-hover:border-sky-500/50"
+              className="bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-neutral-800 transition-colors group-hover:border-purple-500/50"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -63,7 +63,7 @@ function MayLike({ currentProject }) {
                 </div>
               </div>
               <div className="p-4">
-                <h4 className="font-bold text-lg text-black dark:text-white group-hover:text-sky-500 transition-colors line-clamp-2">{project.title}</h4>
+                <h4 className="font-bold text-lg text-black dark:text-white group-hover:text-purple-500 transition-colors line-clamp-2">{project.title}</h4>
                 <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{project.year}</p>
               </div>
             </motion.div>

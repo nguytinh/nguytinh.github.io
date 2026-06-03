@@ -25,7 +25,7 @@ function Aim() {
           href="https://aim-trainer-nk0b.onrender.com/"
           target="_blank"
           rel="noreferrer"
-          className="px-6 py-2 bg-sky-600 text-white rounded-full font-semibold hover:bg-sky-500 transition-colors shadow-lg"
+          className="px-6 py-2 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-500 transition-colors shadow-lg"
         >
           Play Here!
         </a>

@@ -120,12 +120,12 @@ function Neuralnetwork() {
         title="Tukey Comparisons"
         images={[img9, img10]}
       >
-        <h3 className="font-bold text-xl text-sky-400 mb-2">Same Architecture; Different Theme</h3>
+        <h3 className="font-bold text-xl text-purple-400 mb-2">Same Architecture; Different Theme</h3>
         <p className="mb-6">
           Here are the confidence intervals for the Same Architecture, but different themes. This will tell us how the themes performed against one another. From these confidence intervals, we can observe that Animals had the worst performance, then cats/dogs, then clothing, and finally digits performed the best on average. The animal dataset was the most complex because of the different shapes and colors that animals come in, while the digits were the least complex images as they were just hand-drawn images. This tells us that complexity within the image datasets plays a large role in the accuracy of the model. The more complex images tend to make the architectures perform worse while less complexity leads to better performance.
         </p>
 
-        <h3 className="font-bold text-xl text-sky-400 mb-2">Different Architecture; Same Themes</h3>
+        <h3 className="font-bold text-xl text-purple-400 mb-2">Different Architecture; Same Themes</h3>
         <p>
           Next, I want to look at the confidence intervals for different architectures, but same themes. These are snippets of our confidence intervals for the Animal theme but on different architectures. This is used to determine which neural network architecture performed better than others, or worse than others. From these confidence intervals, we found that CNN was much better in performance than all of the architectures. LSTM had better performance than RNN and FFNN while RNN and FFNN had no statistically significant differences. For the Cats/Dogs theme but with different architectures, CNN had the best performance. All of the other models had 0 in their confidence intervals, with no statistically significant difference. Finally, there are the themes of Digits and Clothing: 0 was in the confidence interval for all of the different architectures so none of the Architectures had statistically significant differences because accuracies were closer together here.
         </p>
@@ -135,12 +135,12 @@ function Neuralnetwork() {
         title="More Tukey Comparisons" 
         images={[img11, img12]}
       >
-        <h3 className="font-bold text-xl text-sky-400 mb-2">Same Architecture; Different Epochs</h3>
+        <h3 className="font-bold text-xl text-purple-400 mb-2">Same Architecture; Different Epochs</h3>
         <p className="mb-6">
           Looking at confidence intervals with the same architectures but different epochs, we are trying to find differences in performance in solely the epochs. CNN and LSTM at 15 epochs outperformed themselves compared to at 1 epoch. On the other hand, FFNN and RNN had values that were too similar and 0 was in their confidence interval so there are no statistically significant differences there.
         </p>
 
-        <h3 className="font-bold text-xl text-sky-400 mb-2">Different Architecture; Same Epochs</h3>
+        <h3 className="font-bold text-xl text-purple-400 mb-2">Different Architecture; Same Epochs</h3>
         <p>
           Now moving on to the confidence intervals with different architectures, we can use these to determine which architecture performed better than the others. For these, we specifically chose 15 epochs which is the maximum number of epochs that we were testing with, and theoretically should be the best. Similar to our other findings, CNN was better than FFNN, LSTM, and RNN. LSTM had better accuracy than RNN. However the confidence intervals for RNN with FFNN, as well as FFNN with LSTM had 0 in it, so there are no statistically significant differences here.
         </p>

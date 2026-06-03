@@ -40,8 +40,8 @@ const ProjectLayout = ({ title, description, children }) => {
 export const SectionCard = ({ title, children, images = [] }) => {
   return (
     <FadeIn className="space-y-8">
-      <div className="bg-gray-50 dark:bg-neutral-900 p-8 md:p-12 border-l-4 border-sky-500 shadow-xl transition-colors duration-300">
-        <h2 className="text-3xl font-bold mb-6 text-sky-500">{title}</h2>
+      <div className="bg-gray-50 dark:bg-neutral-900 p-8 md:p-12 border-l-4 border-purple-500 shadow-xl transition-colors duration-300">
+        <h2 className="text-3xl font-bold mb-6 text-purple-500">{title}</h2>
         <div className="text-lg text-gray-900 dark:text-gray-300 leading-relaxed mb-8 space-y-4">
           {children}
         </div>

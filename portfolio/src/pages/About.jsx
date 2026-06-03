@@ -22,7 +22,7 @@ function AboutMe() {
     <PageWrapper className="bg-slate-900 text-slate-50 min-h-screen">
       {/* Background Effect - could be a separate component */}
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
-         <div className="absolute top-0 -left-4 w-72 h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+         <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
          <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
       </div>
@@ -36,7 +36,7 @@ function AboutMe() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="absolute inset-0 bg-sky-500 blur-xl opacity-50"></div>
+            <div className="absolute inset-0 bg-purple-500 blur-xl opacity-50"></div>
             <img 
               src={profileImage} 
               alt="Profile" 
@@ -49,7 +49,7 @@ function AboutMe() {
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white">Tinh-Phong Nguyen</h1>
             </FadeIn>
             <FadeIn delay={0.4}>
-              <p className="text-xl md:text-2xl text-sky-400 font-light">Computer Scientist</p>
+              <p className="text-xl md:text-2xl text-purple-400 font-light">Computer Scientist</p>
             </FadeIn>
           </div>
 
@@ -76,7 +76,7 @@ function AboutMe() {
           <FadeIn delay={1.0} className="pt-10">
             <button 
               onClick={handleIconClick}
-              className="text-slate-400 hover:text-sky-400 transition-colors duration-300 group flex flex-col items-center gap-2"
+              className="text-slate-400 hover:text-purple-400 transition-colors duration-300 group flex flex-col items-center gap-2"
             >
               <i className="fas fa-info-circle text-4xl group-hover:scale-110 transition-transform"></i>
               <span className="text-sm">More Info</span>
