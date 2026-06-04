@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import chessImage from '../assets/Chess/chess1.jpg';
-import restaurantImage from '../assets/Restaurant/banhmi.jpeg';
 import oopImage from '../assets/OOP/custom.png';
 import inventoryImage from '../assets/4yb/lockedpage.png';
-import aimImage from '../assets/aim.jpg';
 import nnIMAGE from '../assets/nnbench.jpg';
 import aeryImage from '../assets/aery.jpg';
 import horseImage from '../assets/horsegpt.jpg';
@@ -17,11 +15,9 @@ function MayLike({ currentProject }) {
   const projects = [
     { title: 'Distributed Experiment Workflow (DEW)', year: '2026', image: dewImage, link: '/dew' },
     { title: 'Tinvest', year: '2025', image: tinvestImage, link: '/tinvest' },
-    { title: 'Adaptive Multi-Restaurant Web Application', year: '2024', image: restaurantImage, link: '/restaurant' },
     { title: 'Chess AI - Sigma Phi Delta', year: '2023', image: chessImage, link: '/chess' },
     { title: 'Demon Slayer - OOP Simulation', year: '2023', image: oopImage, link: '/demonslayer' },
     { title: '4YourInventory', year: '2024', image: inventoryImage, link: '/4yourinventory' },
-    { title: 'Aim Trainer', year: '2024', image: aimImage, link: '/aim' },
     { title: 'Neural Network Benchmark', year: '2024', image: nnIMAGE, link: '/benchmark' },
     { title: 'Aery', year: '2024', image: aeryImage, link: '/aery' },
     { title: 'HorseGPT', year: '2025', image: horseImage, link: '/horsegpt' }

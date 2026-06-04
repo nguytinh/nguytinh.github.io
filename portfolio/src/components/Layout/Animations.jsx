@@ -144,9 +144,7 @@ export const StaggerContainer = ({ children, className = "", staggerDelay = 0.1 
     if (index === 3) direction = directions[0]; // Neural: Left
     if (index === 4) direction = directions[1]; // 4YourInv: Right
     if (index === 5) direction = directions[0]; // Chess: Left
-    if (index === 6) direction = directions[1]; // Aim: Right
-    if (index === 7) direction = directions[0]; // Restaurant: Left
-    if (index === 8) direction = directions[1]; // Demon: Right
+    if (index === 6) direction = directions[1]; // Chess: Right
 
     const dir = direction;
 

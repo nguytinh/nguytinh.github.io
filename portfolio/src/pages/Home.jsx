@@ -9,9 +9,7 @@ import resume from '../assets/Tinh_s_Resume.pdf';
 import inventoryImage from '../assets/inventory.jpg';
 import neuralnetworkImage from '../assets/nnbench.jpg';
 import chessImage from '../assets/chess.jpg';
-import restaurantImage from '../assets/restaurant.jpg';
 import oopImage from '../assets/oop.jpg';
-import aimImage from '../assets/aim.jpg';
 import aeryImage from '../assets/aery.jpg';
 import horseImage from '../assets/horsegpt.jpg';
 
@@ -46,7 +44,7 @@ function Home() {
       year: "2025",
       image: tinvestImage,
       link: "/tinvest",
-      size: "wide",
+      size: "normal",
     },
     {
       title: "Aery",
@@ -79,23 +77,6 @@ function Home() {
       year: "2023",
       image: chessImage,
       link: "/chess",
-      size: "normal",
-    },
-    // Row 5: Aim (4) + Restaurant (4) + Demon Slayer (4) = 12
-    {
-      title: "Aim Trainer",
-      description: "Flask Web Game",
-      year: "2024",
-      image: aimImage,
-      link: "/aim",
-      size: "normal",
-    },
-    {
-      title: "Restaurant App",
-      description: "Multi-Restaurant Web App",
-      year: "2024",
-      image: restaurantImage,
-      link: "/restaurant",
       size: "normal",
     },
     {
@@ -203,6 +184,9 @@ function Home() {
               rowSpan = "row-span-1";
             } else if (project.size === "normal") {
               colSpan = "md:col-span-2 lg:col-span-4";
+              rowSpan = "row-span-1";
+            } else if (project.size === "full") {
+              colSpan = "md:col-span-4 lg:col-span-12";
               rowSpan = "row-span-1";
             }
 
