@@ -13,7 +13,7 @@ import sphereRevision from '../assets/DEW/sphere_revision.png';
 function DEW() {
   return (
     <ProjectLayout
-      title="Distributed Experiment Workflow (DEW)"
+      title="Distributed Experiment Workflows"
       description="DEW is a web application that lets researchers visually design multi-node network experiments and deploy them to the SPHERE cybersecurity testbed in one click. Built as a beginner-friendly extension of the SPHERE Merge Portal, it replaces hand-written MergeTB models and the full manual workflow of experiment creation, resource reservation, materialization, XDC creation, and attachment."
     >
       <div className="flex justify-center gap-4">
@@ -37,7 +37,7 @@ function DEW() {
 
       <SectionCard title="What is DEW?" images={[dewLogin]}>
         <p>
-          DEW (Distributed Experiment Workflow) is a visual editor and deployment pipeline for large-scale cybersecurity experiments on the SPHERE research infrastructure. Researchers define topology, node behaviors, hardware constraints, and IP assignments in the browser, then push a complete experiment to SPHERE without writing low-level testbed configuration by hand.
+          DEW (Distributed Experiment Workflows) is a visual editor and deployment pipeline for large-scale cybersecurity experiments on the SPHERE research infrastructure. Researchers define topology, node behaviors, hardware constraints, and IP assignments in the browser, then push a complete experiment to SPHERE without writing low-level testbed configuration by hand.
         </p>
         <p>
           The project aligns with the SPHERE Merge Portal, which helps researchers manage and create large-scale cyber security experiments. DEW targets new SPHERE users who want to create and visualize experiments before committing them to the testbed—offering a gentler on-ramp than the full Merge Portal workflow alone.
@@ -128,7 +128,7 @@ function DEW() {
         </pre>
       </SectionCard>
 
-      <MayLike currentProject="Distributed Experiment Workflow (DEW)" />
+      <MayLike currentProject="Distributed Experiment Workflows" />
     </ProjectLayout>
   );
 }

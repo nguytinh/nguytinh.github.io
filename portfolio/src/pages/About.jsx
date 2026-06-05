@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import PageWrapper from '../components/Layout/PageWrapper';
 import resume from '../assets/Tinh_s_Resume.pdf';
 import profileImage from '../assets/profile.JPG';
-import ScrollToTopButton from '../components/ScrollToTopButton';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const containerVariants = {
@@ -131,7 +130,7 @@ function AboutMe() {
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-purple-600 opacity-20 blur-3xl" />
             </div>
 
-            <div className="relative -mt-16 lg:-mt-24">
+            <div className="relative -mt-28 lg:-mt-40">
               {/* Decorative offset border */}
               <div className="absolute -top-3 -right-3 w-full h-full border border-purple-500/30" />
               <img
@@ -147,7 +146,6 @@ function AboutMe() {
         </div>
       </div>
 
-      <ScrollToTopButton />
     </PageWrapper>
   );
 }

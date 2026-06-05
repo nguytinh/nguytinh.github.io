@@ -16,12 +16,40 @@ import img10 from '../assets/More/img10.JPEG';
 import img11 from '../assets/More/img11.JPG';
 import img12 from '../assets/More/img12.JPG';
 import img13 from '../assets/More/img13.JPG';
+import img14 from '../assets/More/img14.jpg';
+import img15 from '../assets/More/img15.JPG';
+import img16 from '../assets/More/img16.jpg';
+import img17 from '../assets/More/img17.JPG';
+import img18 from '../assets/More/img18.JPG';
+import img19 from '../assets/More/img19.JPG';
+import img20 from '../assets/More/img20.JPG';
+import img21 from '../assets/More/img21.JPG';
+import img22 from '../assets/More/img22.JPG';
+import img23 from '../assets/More/img23.JPG';
+import img24 from '../assets/More/img24.JPG';
+import img25 from '../assets/More/img25.JPG';
+import img26 from '../assets/More/img26.JPG';
+import img27 from '../assets/More/img27.JPG';
+import img28 from '../assets/More/img28.JPG';
+import img29 from '../assets/More/img29.JPG';
+import img30 from '../assets/More/img30.JPG';
+import img31 from '../assets/More/img31.JPG';
+import img32 from '../assets/More/img32.JPG';
+import img33 from '../assets/More/img33.JPG';
+import img34 from '../assets/More/img34.JPG';
+import img35 from '../assets/More/img35.JPG';
+import img36 from '../assets/More/img36.JPG';
+import img37 from '../assets/More/img37.JPG';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const images = [
   img7, img8, img1, img2, img3, img4,
   img5, img6, img11, img12, img9, img10, img13,
+  img14, img15, img16, img17, img18, img19,
+  img20, img21, img22, img23, img24, img25,
+  img26, img27, img28, img29, img30, img31,
+  img32, img33, img34, img35, img36, img37,
 ];
 
 // Stagger each image tile
@@ -30,9 +58,40 @@ const tileVariants = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, delay: i * 0.06, ease: 'easeOut' },
+    transition: { duration: 0.55, delay: i * 0.04, ease: 'easeOut' },
   }),
 };
+
+// Individual tile — blurry until the browser finishes decoding the image
+function PhotoTile({ src, index, colSpan, onClick }) {
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <motion.div
+      custom={index}
+      variants={tileVariants}
+      initial="hidden"
+      animate="visible"
+      className={`cursor-zoom-in group relative overflow-hidden h-64 ${colSpan}`}
+      onClick={onClick}
+    >
+      <img
+        src={src}
+        alt={`Photo ${index + 1}`}
+        loading="lazy"
+        decoding="async"
+        onLoad={() => setLoaded(true)}
+        className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-[1.04] ${
+          loaded ? 'blur-0 brightness-100' : 'blur-md brightness-75 scale-105'
+        }`}
+      />
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
+        <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <i className="fas fa-expand-alt text-white text-sm" />
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 function Lightbox({ index, onClose, onPrev, onNext, total }) {
   return (
@@ -201,36 +260,23 @@ function More() {
           />
         </div>
 
-        {/* Masonry grid — click to open lightbox */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3">
-          {images.map((src, i) => (
-            <motion.div
-              key={i}
-              custom={i}
-              variants={tileVariants}
-              initial="hidden"
-              animate="visible"
-              className="break-inside-avoid cursor-zoom-in group relative overflow-hidden"
-              onClick={() => openAt(i)}
-            >
-              <img
+        {/* Photo grid — uniform cell heights keep all columns aligned */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {images.map((src, i) => {
+            // If the last row has only 1 image, span all 3 columns so there's no dead space
+            const remainder = images.length % 3;
+            const isLoneLastItem = remainder === 1 && i === images.length - 1;
+            const colSpan = isLoneLastItem ? 'lg:col-span-3' : '';
+            return (
+              <PhotoTile
+                key={i}
                 src={src}
-                alt={`Photo ${i + 1}`}
-                className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.03]"
-                loading="lazy"
+                index={i}
+                colSpan={colSpan}
+                onClick={() => openAt(i)}
               />
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileHover={{ opacity: 1, scale: 1 }}
-                  className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                >
-                  <i className="fas fa-expand-alt text-white text-sm" />
-                </motion.div>
-              </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

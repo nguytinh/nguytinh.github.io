@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TetrisCard, ParallaxSection } from '../components/Layout/Animations';
 import PageWrapper from '../components/Layout/PageWrapper';
-import ScrollToTopButton from '../components/ScrollToTopButton';
 import resume from '../assets/Tinh_s_Resume.pdf';
 
 import inventoryImage from '../assets/inventory.jpg';
@@ -181,7 +180,6 @@ function Home() {
         </div>
       </section>
 
-      <ScrollToTopButton />
     </PageWrapper>
   );
 }

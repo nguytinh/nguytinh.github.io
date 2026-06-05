@@ -13,7 +13,7 @@ import dewImage from '../assets/dewbanner.jpg';
 
 function MayLike({ currentProject }) {
   const projects = [
-    { title: 'Distributed Experiment Workflow (DEW)', year: '2026', image: dewImage, link: '/dew' },
+    { title: 'Distributed Experiment Workflows', year: '2026', image: dewImage, link: '/dew' },
     { title: 'Tinvest', year: '2025', image: tinvestImage, link: '/tinvest' },
     { title: 'Chess AI - Sigma Phi Delta', year: '2023', image: chessImage, link: '/chess' },
     { title: 'Demon Slayer - OOP Simulation', year: '2023', image: oopImage, link: '/demonslayer' },
