@@ -1,91 +1,152 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ParallaxSection, FadeIn } from '../components/Layout/Animations';
 import PageWrapper from '../components/Layout/PageWrapper';
 import resume from '../assets/Tinh_s_Resume.pdf';
 import profileImage from '../assets/profile.JPG';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-
-// Assuming FontAwesome is available globally or via package
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } },
+};
+
+const socials = [
+  { icon: 'fab fa-github', href: 'https://github.com/nguytinh', label: 'GitHub' },
+  { icon: 'fab fa-linkedin', href: 'https://www.linkedin.com/in/tinh-phong-nguyen/', label: 'LinkedIn' },
+  { icon: 'fas fa-envelope', href: 'mailto:tinhphong04@gmail.com', label: 'Email' },
+];
+
 function AboutMe() {
-  const navigate = useNavigate();
-
-  const handleIconClick = () => {
-    navigate('/more');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <PageWrapper className="bg-slate-900 text-slate-50 min-h-screen">
-      {/* Background Effect - could be a separate component */}
-      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
-         <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-         <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    <PageWrapper className="bg-slate-900 text-white min-h-screen">
+      {/* Ambient glows */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <motion.div
+          className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-purple-600 opacity-[0.08] blur-3xl"
+          animate={{ scale: [1, 1.1, 1], x: [0, 20, 0], y: [0, 15, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-indigo-600 opacity-[0.06] blur-3xl"
+          animate={{ scale: [1, 1.15, 1], x: [0, -15, 0], y: [0, -20, 0] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+        />
       </div>
 
-      <ParallaxSection className="pt-32 pb-10">
-        <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
-          
-          <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
+      <div className="relative z-10 min-h-screen flex items-center">
+        <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+
+          {/* ── Left: text block ── */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="space-y-10 lg:pr-8"
           >
-            <div className="absolute inset-0 bg-purple-500 blur-xl opacity-50"></div>
-            <img 
-              src={profileImage} 
-              alt="Profile" 
-              className="relative w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-slate-800 shadow-2xl"
-            />
+            <div className="space-y-3">
+              <motion.p variants={itemVariants} className="text-purple-400 text-xs tracking-[0.35em] uppercase font-medium">
+                About
+              </motion.p>
+              <motion.h1 variants={itemVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none text-white">
+                Tinh-Phong
+              </motion.h1>
+              <motion.h1 variants={itemVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none text-purple-400 italic">
+                Nguyen.
+              </motion.h1>
+            </div>
+
+            <motion.p variants={itemVariants} className="text-purple-300/80 text-base tracking-widest uppercase font-light">
+              Computer Scientist · Software Engineer
+            </motion.p>
+
+            <motion.div variants={itemVariants} className="space-y-4 text-slate-300 text-lg leading-relaxed max-w-lg">
+              <p>
+                Cal Poly SLO CS graduate and Software Engineer at USC-ISI. I really enjoy playing basketball, exercising, occasional video games, and just meeting new people.
+              </p>
+              <p>
+                I want to move through life with open hands, remembering the people who helped me become who I am. I carry a lot of gratitude for the love, support, and chances I’ve been given, and I know not everyone gets the same. As I grow in my life and career, I hope to turn that gratitude into action. Opening doors where I can, sharing what I have, and helping others find paths that once felt out of reach.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href={resume}
+                target="_blank"
+                rel="noreferrer"
+                className="px-7 py-3 bg-white text-slate-900 rounded-full font-semibold hover:bg-slate-200 transition-colors shadow-lg text-sm tracking-wide"
+              >
+                Resume
+              </a>
+              <Link
+                to="/contact"
+                className="px-7 py-3 border border-slate-700 text-slate-300 rounded-full font-medium hover:border-purple-500 hover:text-white transition-colors text-sm tracking-wide"
+              >
+                Get in touch
+              </Link>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="flex items-center gap-5 pt-2">
+              {socials.map(({ icon, href, label }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target={href.startsWith('mailto') ? undefined : '_blank'}
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="w-10 h-10 rounded-full border border-slate-700 hover:border-purple-500 hover:bg-purple-500/10 flex items-center justify-center text-slate-400 hover:text-purple-400 transition-all duration-300"
+                >
+                  <i className={`${icon} text-sm`} />
+                </a>
+              ))}
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <Link
+                to="/more"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="inline-flex items-center gap-2 text-slate-500 hover:text-purple-400 transition-colors text-sm group"
+              >
+                <span className="tracking-widest uppercase text-xs">See my photos</span>
+                <i className="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
           </motion.div>
 
-          <div className="space-y-4">
-            <FadeIn delay={0.2}>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white">Tinh-Phong Nguyen</h1>
-            </FadeIn>
-            <FadeIn delay={0.4}>
-              <p className="text-xl md:text-2xl text-purple-400 font-light">Computer Scientist</p>
-            </FadeIn>
-          </div>
+          {/* ── Right: photo ── */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
+            className="relative flex justify-center lg:justify-end"
+          >
+            {/* Glow behind photo */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-purple-600 opacity-20 blur-3xl" />
+            </div>
 
-          <FadeIn delay={0.6}>
-            <a 
-              href={resume} 
-              target="_blank" 
-              rel="noreferrer"
-              className="inline-block px-8 py-3 bg-white text-slate-900 rounded-full font-semibold hover:bg-slate-200 transition-colors shadow-lg shadow-white/10"
-            >
-              Resume
-            </a>
-          </FadeIn>
-
-          <FadeIn delay={0.8} className="space-y-6 max-w-2xl text-lg md:text-xl leading-relaxed text-gray-900 dark:text-gray-300">
-            <p>
-              I’m a Cal Poly SLO Computer Science graduate and Software Engineer at USC-ISI, and my focuses are on full-stack development, machine learning and software development. Being inspired by curiosity and innovation, I am interested in versatile SWE positions.
-            </p>
-            <p>
-              Hello guys. I like playing basketball, I love occassional gambling (investing in the stock market), and I like working out. Lets go warriors! Lets go Pat Spencer! Feel free to contact me to talk about both professional and unprofessional topics.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={1.0} className="pt-10">
-            <button 
-              onClick={handleIconClick}
-              className="text-slate-400 hover:text-purple-400 transition-colors duration-300 group flex flex-col items-center gap-2"
-            >
-              <i className="fas fa-info-circle text-4xl group-hover:scale-110 transition-transform"></i>
-              <span className="text-sm">More Info</span>
-            </button>
-          </FadeIn>
+            <div className="relative -mt-16 lg:-mt-24">
+              {/* Decorative offset border */}
+              <div className="absolute -top-3 -right-3 w-full h-full border border-purple-500/30" />
+              <img
+                src={profileImage}
+                alt="Tinh-Phong Nguyen"
+                className="relative w-72 md:w-96 lg:w-[420px] aspect-[3/4] object-cover shadow-2xl"
+              />
+              {/* Subtle gradient at bottom of photo */}
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-900/60 to-transparent" />
+            </div>
+          </motion.div>
 
         </div>
-      </ParallaxSection>
-      
+      </div>
+
       <ScrollToTopButton />
     </PageWrapper>
   );

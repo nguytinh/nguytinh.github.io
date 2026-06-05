@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-black dark:bg-black dark:text-white antialiased overflow-x-hidden transition-colors duration-300;
+    @apply bg-slate-900 text-white antialiased overflow-x-hidden;
   }
 }
 

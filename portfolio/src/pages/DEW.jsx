@@ -42,13 +42,14 @@ function DEW() {
         <p>
           The project aligns with the SPHERE Merge Portal, which helps researchers manage and create large-scale cyber security experiments. DEW targets new SPHERE users who want to create and visualize experiments before committing them to the testbed—offering a gentler on-ramp than the full Merge Portal workflow alone.
         </p>
-        <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
+        <ul className="list-disc list-inside space-y-2 text-slate-300">
           <li><strong>Visual experiment design</strong> — topology, behaviors, constraints, and bindings in one UI</li>
           <li><strong>Beginner-friendly</strong> — no hand-written MergeTB models required to get started</li>
           <li><strong>SPHERE extension</strong> — requires a SPHERE account; authenticates through SPHERE Kratos</li>
           <li><strong>One-click deploy</strong> — &quot;Push to SPHERE&quot; handles reservation, materialization, and XDC setup</li>
         </ul>
       </SectionCard>
+
 
       <SectionCard title="SPHERE Authentication" images={[sphereSignin]}>
         <p>
@@ -84,7 +85,7 @@ function DEW() {
         <p>
           After deploy, JupyterHub opens automatically for the experiment&apos;s XDC so researchers can work with notebooks immediately. The Merge Portal view confirms the experiment is live on the testbed with the expected topology and resources.
         </p>
-        <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
+        <ul className="list-disc list-inside space-y-2 text-slate-300">
           <li>Generates and translates configs through <code className="text-purple-400">DewFunctions/</code> parsers and generators on the backend</li>
           <li>Calls the external SPHERE Merge API via <code className="text-purple-400">@mergetb/api</code> testbed types</li>
           <li>Opens the Jupyter notebook URL for the materialized experiment without manual navigation</li>
@@ -92,7 +93,7 @@ function DEW() {
       </SectionCard>
 
       <SectionCard title="Frontend — Angular 15">
-        <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
+        <ul className="list-disc list-inside space-y-2 text-slate-300">
           <li><strong>Framework:</strong> Angular 15 — editor and API client; proxies <code className="text-purple-400">/api/*</code> to Flask</li>
           <li><strong>UI:</strong> Angular Material + Bootstrap</li>
           <li><strong>Graphs:</strong> vis-network, @swimlane/ngx-graph, d3</li>
@@ -104,7 +105,7 @@ function DEW() {
       </SectionCard>
 
       <SectionCard title="Backend — Flask + REST">
-        <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
+        <ul className="list-disc list-inside space-y-2 text-slate-300">
           <li><strong>Framework:</strong> Flask 1.1 + Flask-RESTX (Swagger), ~70+ routes in <code className="text-purple-400">privateapi.py</code></li>
           <li><strong>ORM:</strong> Flask-SQLAlchemy + SQLAlchemy-Continuum (versioned experiments)</li>
           <li><strong>Migrations:</strong> Alembic</li>
@@ -118,7 +119,7 @@ function DEW() {
         <p>
           In development, the Angular dev server proxies to Flask on port 5555 via <code className="text-purple-400">proxy.conf.json</code>. Production runs as a Docker image: nginx on port 80 serves Angular static assets and proxies <code className="text-purple-400">/api</code> to Flask on port 8800. Kubernetes deployment uses a Helm chart (<code className="text-purple-400">deploy/dew/</code>) with a single container, CephFS PVC for SQLite persistence, and ingress at <code className="text-purple-400">dew.sphere-testbed.net</code>.
         </p>
-        <pre className="text-sm bg-gray-100 dark:bg-neutral-800 p-4 rounded overflow-x-auto text-gray-800 dark:text-gray-300">
+        <pre className="text-sm bg-slate-900 p-4 rounded overflow-x-auto text-slate-300">
 {`Browser
   └─► nginx (TLS, static files, /api proxy)
         └─► uWSGI → Flask API

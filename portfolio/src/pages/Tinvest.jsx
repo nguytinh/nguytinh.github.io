@@ -24,7 +24,7 @@ function Tinvest() {
       </div>
 
       <SectionCard title="Overview & Live Demo Features" images={[homeTinvest]}>
-        <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
+        <ul className="list-disc list-inside space-y-2 text-slate-300">
           <li><strong>Real-time stock price tracking</strong> with automatic data refresh</li>
           <li><strong>Interactive 3D ball visualization</strong> using physics simulation</li>
           <li><strong>Personalized watchlists</strong> with favorites and custom stock additions</li>
@@ -36,7 +36,7 @@ function Tinvest() {
       </SectionCard>
 
       <SectionCard title="Technical Highlights: Frontend Architecture" images={[chartingTinvest]}>
-        <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
+        <ul className="list-disc list-inside space-y-2 text-slate-300">
           <li><strong>React 18</strong> with TypeScript for type-safe component development</li>
           <li><strong>Vite</strong> as the build tool for lightning-fast HMR and optimized production builds</li>
           <li><strong>React Router v6</strong> for client-side routing and navigation</li>
@@ -48,7 +48,7 @@ function Tinvest() {
       </SectionCard>
 
       <SectionCard title="Technical Highlights: Backend Architecture">
-        <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
+        <ul className="list-disc list-inside space-y-2 text-slate-300">
           <li><strong>Node.js + Express</strong> RESTful API with TypeScript</li>
           <li><strong>MySQL</strong> database with connection pooling for optimized performance</li>
           <li><strong>JWT (JSON Web Tokens)</strong> for stateless authentication</li>
@@ -91,7 +91,7 @@ function Tinvest() {
       </SectionCard>
 
        <SectionCard title="Performance Optimizations">
-        <ul className="list-disc list-inside space-y-2 text-gray-900 dark:text-slate-300">
+        <ul className="list-disc list-inside space-y-2 text-slate-300">
             <li><strong>Parallel data fetching</strong> reduces load time from 15+ seconds to &lt; 2 seconds</li>
             <li><strong>Connection pooling</strong> with 10 concurrent connections</li>
             <li><strong>Client-side caching</strong> eliminates redundant API calls</li>
